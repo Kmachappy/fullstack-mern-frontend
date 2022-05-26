@@ -1,3 +1,17 @@
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Index from '../pages/Index'
+import Show from '../pages/Show'
+
+
 export default function Main(){
-    return <h1>This is the Main</h1>
+    return(
+        <main>
+            <Routes>
+                <Route exact path='/'element={<Index />} />
+                <Route path='/people/:id' element={<Show/>}/>
+            </Routes>
+        </main>
+        
+    )
 }
